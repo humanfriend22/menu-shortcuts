@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+let sshKnownHostsPath = "/Users/humanfriend22/.ssh/known_hosts"
+
 @main
 struct Menu_ShortcutsApp: App {
     var body: some Scene {
@@ -14,6 +16,11 @@ struct Menu_ShortcutsApp: App {
 //            ContentView()
 //        }
         MenuBarExtra("Menu Bar IP", systemImage: "server.rack") {
+            Button("Reset SSH Known Hosts") {
+                runCommand(executableURL: "/bin/rm", arguments: [sshKnownHostsPath])
+                runCommand(executableURL: "/usr/bin/touch", arguments: [sshKnownHostsPath])
+            }
+            
             Button("Restart Spotify") {
                 killAndRelaunchSpotify()
             }
