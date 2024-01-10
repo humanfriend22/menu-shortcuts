@@ -2,6 +2,7 @@
 A tiny macOS menu bar app containing some shortcuts I would like in my menu bar
 
 ### Shortcuts
+- `reset ssh`: Clears your known_hosts file for ssh
 - `ip`: Copies your IP address to your clipboard
 - `spotify`: Quits and relaunches Spotify
 
